@@ -1,3 +1,4 @@
+// biome-ignore lint: Type 지정이 안됨
 import { Test, TestingModule } from "@nestjs/testing";
 import { AppController } from "./app.controller";
 import { ExampleService } from "./app.service";

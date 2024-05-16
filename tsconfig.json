@@ -1,16 +1,30 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "strict": true,
+    "module": "CommonJS",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@libs/*": ["src/libs/*"],
+      "@auth/*": ["src/libs/auth/*"],
+      "@src/*": ["src/*"],
+    }
+  },
+  "exclude": ["source_codes", "node_modules", "dist"],
+  "include": ["src"]
 }

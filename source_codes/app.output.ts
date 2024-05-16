@@ -1,8 +1,6 @@
 import { createZodDto } from "nestjs-zod";
 import { z } from "nestjs-zod/z";
 
-const ExampleOutputSchema = z.object({
-  value: z.string().describe("This is a value"),
-});
+const ExampleOutputSchema = changeme;
 
 export class ExampleOutputDto extends createZodDto(ExampleOutputSchema) {}

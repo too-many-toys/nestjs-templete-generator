@@ -9,6 +9,9 @@
 			"recommended": true,
 			"suspicious": {
 				"noExplicitAny": "off"
+			},
+			"style": {
+				"useImportType": "off"
 			}
 		},
 		"ignore": [
@@ -42,5 +45,10 @@
 		"formatter": {
 			"trailingCommas": "none"
 		}
+	},
+	"files": {
+		"ignore": [
+			"./source_codes/*.ts"
+		]
 	}
 }

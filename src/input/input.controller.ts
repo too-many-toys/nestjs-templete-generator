@@ -1,12 +1,16 @@
 import { Controller, Get } from "@nestjs/common";
-import type { InputService } from "./input.service";
+import { InputService } from "./input.service";
+import { InputFileParser } from "@libs/file-parser";
 
 @Controller("input")
 export class InputController {
-  constructor(private readonly inputService: InputService) {}
+  constructor(
+    private readonly inputService: InputService,
+    private readonly parser: InputFileParser,
+  ) {}
 
   @Get("/")
-  getHello(): string {
-    return this.inputService.getInputFile();
+  getHello() {
+    return this.parser.changeString("changeme", "teststring");
   }
 }

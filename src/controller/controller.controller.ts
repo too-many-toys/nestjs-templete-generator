@@ -1,12 +1,12 @@
 import { Controller, Get } from "@nestjs/common";
-import type { ControllerService } from "./controller.service";
+import { ControllerService } from "./controller.service";
 
 @Controller("controller")
 export class ControllerController {
   constructor(private readonly controllerService: ControllerService) {}
 
   @Get("/")
-  getHello(): string {
+  getHello() {
     return this.controllerService.getControllerFile();
   }
 }
