@@ -7,8 +7,10 @@ import { Injectable } from "@nestjs/common";
 class FileChanger {
   protected file: string;
 
-  deleteString(stringToDelete: string): void {
-    this.file = this.file.replace(stringToDelete, "");
+  deleteString(stringToDelete: string): string {
+    const file = this.file.replace(stringToDelete, "");
+
+    return file;
   }
 
   changeString(oldString: string, newString: string): string {

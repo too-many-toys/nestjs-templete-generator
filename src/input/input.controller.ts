@@ -4,13 +4,10 @@ import { InputFileParser } from "@libs/file-parser";
 
 @Controller("input")
 export class InputController {
-  constructor(
-    private readonly inputService: InputService,
-    private readonly parser: InputFileParser,
-  ) {}
+  constructor(private readonly inputService: InputService) {}
 
   @Get("/")
   getHello() {
-    return this.parser.changeString("changeme", "teststring");
+    return {};
   }
 }
